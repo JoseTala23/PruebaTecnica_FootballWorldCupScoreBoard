@@ -1,0 +1,15 @@
+C:\Users\Usuario\source\repos\FootballWorldCupScoreBoard\FootballWorldCupScoreBoard_\bin\Debug\net6.0\FootballWorldCupScoreBoard_.exe
+C:\Users\Usuario\source\repos\FootballWorldCupScoreBoard\FootballWorldCupScoreBoard_\bin\Debug\net6.0\FootballWorldCupScoreBoard_.deps.json
+C:\Users\Usuario\source\repos\FootballWorldCupScoreBoard\FootballWorldCupScoreBoard_\bin\Debug\net6.0\FootballWorldCupScoreBoard_.runtimeconfig.json
+C:\Users\Usuario\source\repos\FootballWorldCupScoreBoard\FootballWorldCupScoreBoard_\bin\Debug\net6.0\FootballWorldCupScoreBoard_.dll
+C:\Users\Usuario\source\repos\FootballWorldCupScoreBoard\FootballWorldCupScoreBoard_\bin\Debug\net6.0\FootballWorldCupScoreBoard_.pdb
+C:\Users\Usuario\source\repos\FootballWorldCupScoreBoard\FootballWorldCupScoreBoard_\obj\Debug\net6.0\FootballWorldCupScoreBoard_.vbproj.AssemblyReference.cache
+C:\Users\Usuario\source\repos\FootballWorldCupScoreBoard\FootballWorldCupScoreBoard_\obj\Debug\net6.0\FootballWorldCupScoreBoard_.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\source\repos\FootballWorldCupScoreBoard\FootballWorldCupScoreBoard_\obj\Debug\net6.0\FootballWorldCupScoreBoard_.AssemblyInfoInputs.cache
+C:\Users\Usuario\source\repos\FootballWorldCupScoreBoard\FootballWorldCupScoreBoard_\obj\Debug\net6.0\FootballWorldCupScoreBoard_.AssemblyInfo.vb
+C:\Users\Usuario\source\repos\FootballWorldCupScoreBoard\FootballWorldCupScoreBoard_\obj\Debug\net6.0\FootballWorldCupScoreBoard_.vbproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\FootballWorldCupScoreBoard\FootballWorldCupScoreBoard_\obj\Debug\net6.0\FootballWorldCupScoreBoard_.dll
+C:\Users\Usuario\source\repos\FootballWorldCupScoreBoard\FootballWorldCupScoreBoard_\obj\Debug\net6.0\refint\FootballWorldCupScoreBoard_.dll
+C:\Users\Usuario\source\repos\FootballWorldCupScoreBoard\FootballWorldCupScoreBoard_\obj\Debug\net6.0\FootballWorldCupScoreBoard_.pdb
+C:\Users\Usuario\source\repos\FootballWorldCupScoreBoard\FootballWorldCupScoreBoard_\obj\Debug\net6.0\FootballWorldCupScoreBoard_.genruntimeconfig.cache
+C:\Users\Usuario\source\repos\FootballWorldCupScoreBoard\FootballWorldCupScoreBoard_\obj\Debug\net6.0\ref\FootballWorldCupScoreBoard_.dll
