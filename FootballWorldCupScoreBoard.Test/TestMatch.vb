@@ -44,14 +44,14 @@ Namespace FootballWorldCupScoreBoard.Test
         Public Sub GetAllMatchesOrderByPoint_ReturnsMatchesOrderedByPoint()
             ' Arrange
             Dim match1 As New Match(New Team("Equipo A"), New Team("Equipo B"))
-            match1.puntuacionLocal = 3
-            match1.puntuacionVisitante = 1
+            match1.scoreLocal = 3
+            match1.scoreVisitante = 1
             Dim match2 As New Match(New Team("Equipo C"), New Team("Equipo D"))
-            match2.puntuacionLocal = 2
-            match2.puntuacionVisitante = 0
+            match2.scoreLocal = 2
+            match2.scoreVisitante = 0
             Dim match3 As New Match(New Team("Equipo E"), New Team("Equipo F"))
-            match3.puntuacionLocal = 1
-            match3.puntuacionVisitante = 1
+            match3.scoreLocal = 1
+            match3.scoreVisitante = 1
             mockData.listOfMatch.TryAdd(1, match1)
             mockData.listOfMatch.TryAdd(2, match2)
             mockData.listOfMatch.TryAdd(3, match3)
@@ -72,8 +72,8 @@ Namespace FootballWorldCupScoreBoard.Test
         Public Sub UpdateScore_ModifiesMatchScore()
             ' Arrange
             Dim match As New Match(New Team("Equipo A"), New Team("Equipo B"))
-            match.puntuacionLocal = 1
-            match.puntuacionVisitante = 2
+            match.scoreLocal = 1
+            match.scoreVisitante = 2
             mockData.listOfMatch.TryAdd(1, match)
 
             Dim matchService As New MatchRepositories(mockData)
@@ -82,8 +82,8 @@ Namespace FootballWorldCupScoreBoard.Test
             matchService.UpdateScore(3, 1, 1)
 
             ' Assert
-            Assert.AreEqual(3, match.puntuacionLocal)
-            Assert.AreEqual(1, match.puntuacionVisitante)
+            Assert.AreEqual(3, match.scoreLocal)
+            Assert.AreEqual(1, match.scoreVisitante)
         End Sub
 
         <Test>
@@ -115,8 +115,8 @@ Namespace FootballWorldCupScoreBoard.Test
             Assert.AreEqual(1, mockData.listOfMatch.Count)
             Dim match As Match = mockData.listOfMatch(1)
             Assert.IsNotNull(match)
-            Assert.AreEqual(teamLocal, match.equipoLocal)
-            Assert.AreEqual(teamVisitante, match.equipoVisitante)
+            Assert.AreEqual(teamLocal, match.teamLocal)
+            Assert.AreEqual(teamVisitante, match.teamVisitante)
         End Sub
 
     End Class

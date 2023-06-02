@@ -19,22 +19,28 @@ Public Class MatchRepositories
     End Function
 
     Public Function GetAllMatchesOrderByPoint() As List(Of Match) Implements IMatch.GetAllMatchesOrderByPoint
-
-        Dim ret As List(Of Match) = data.listOfMatch.Values _
+        Try
+            Dim ret As List(Of Match) = data.listOfMatch.Values _
             .OrderByDescending(Function(game) game.TotalScore) _
-            .ThenByDescending(Function(game) game.fecha) _
+            .ThenByDescending(Function(game) game.date_) _
             .ToList()
 
-        Return ret
+            Return ret
+        Catch ex As Exception
+            Console.WriteLine("Error al obtener los Partidos (Ordenados)" + ex.Message)
+        End Try
     End Function
 
     Public Sub UpdateScore(scoreLocal As Integer, scoreVisitante As Integer, pos As Integer) Implements IMatch.UpdateScore
 
         Dim match As Match
-
-        match = GetMatchByPos(pos)
-        match.puntuacionLocal = scoreLocal
-        match.puntuacionVisitante = scoreVisitante
+        Try
+            match = GetMatchByPos(pos)
+            match.scoreLocal = scoreLocal
+            match.scoreVisitante = scoreVisitante
+        Catch ex As Exception
+            Console.WriteLine("Se ha producido un error al actualizar la puntuación del partido. (" + ex.Message + ")")
+        End Try
 
     End Sub
 
@@ -52,24 +58,23 @@ Public Class MatchRepositories
     End Sub
 
     Private Function GetMatchByPos(idMatch As Integer) As Match
-        'Obtenermos el elemento por la posicion que tenga en la lista
-        Dim ret = data.listOfMatch.ElementAt(idMatch - 1)
+        Try
+            'Obtenermos el elemento por la posicion que tenga en la lista        
+            Dim ret = data.listOfMatch.ElementAt(idMatch - 1)
 
-        Return ret.Value
-    End Function
-
-    Public Function GetMatch(idMatch As Integer) As Match
-        'Obtenemos el id de partido por la id que pasamos por parametro
-        'que identifica al partido en la lista de partidos que hay en memoria
-
-        Dim ret = data.listOfMatch.FirstOrDefault(Function(item) item.Key = idMatch)
-
-        Return ret.Value
+            Return ret.Value
+        Catch ex As Exception
+            Console.WriteLine("Error al obtener los Partidos" + ex.Message)
+        End Try
     End Function
 
     Public Sub StartMatch(teamLocal As Team, teamVisitante As Team) Implements IMatch.StartMatch
-        Dim match As Match = New Match(teamLocal, teamVisitante)
-        data.listOfMatch.TryAdd(data.asignId(), match)
+        Try
+            Dim match As Match = New Match(teamLocal, teamVisitante)
+            data.listOfMatch.TryAdd(data.asignId(), match)
+        Catch ex As Exception
+            Console.WriteLine("Error al iniciar el Partido" + ex.Message)
+        End Try
     End Sub
 End Class
 

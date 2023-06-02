@@ -1,20 +1,20 @@
 ﻿Public Class Match
-    Public equipoLocal As Team
-    Public equipoVisitante As Team
-    Public puntuacionLocal As Integer
-    Public puntuacionVisitante As Integer
-    Public ReadOnly fecha As Date
+    Public teamLocal As Team
+    Public teamVisitante As Team
+    Public scoreLocal As Integer
+    Public scoreVisitante As Integer
+    Public ReadOnly date_ As Date
 
     Public ReadOnly Property TotalScore As Integer
         Get
-            Return puntuacionLocal + puntuacionVisitante
+            Return scoreLocal + scoreVisitante
         End Get
     End Property
 
     Public Sub New(equipoLocal As Team, equipoVisitante As Team)
-        Me.equipoLocal = equipoLocal
-        Me.equipoVisitante = equipoVisitante
-        fecha = Now
+        Me.teamLocal = equipoLocal
+        Me.teamVisitante = equipoVisitante
+        date_ = Now
     End Sub
 
 End Class

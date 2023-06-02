@@ -7,17 +7,7 @@ Module Program
         Dim repoMatch As MatchRepositories = New MatchRepositories
 
         While opcion <> 6
-            Console.WriteLine("==== Menú ====")
-            Console.WriteLine("1. Iniciar Partido.")
-            Console.WriteLine("2. Finalizar un Partido")
-            Console.WriteLine("3. Actualizar puntuación de un Partido")
-            Console.WriteLine("4. Obtener resumen de los partidos")
-            Console.WriteLine("5. Obtener resumen de los partidos")
-            Console.WriteLine("6. Salir")
-            Console.WriteLine("================")
-
-            Console.Write("Ingrese una opción: ")
-            Dim entrada As String = Console.ReadLine()
+            Dim entrada As String = MostrarMenu()
 
             If Integer.TryParse(entrada, opcion) Then
                 Select Case opcion
@@ -63,6 +53,21 @@ Module Program
         Console.ReadKey()
     End Sub
 
+    Private Function MostrarMenu() As String
+        Console.WriteLine("==== Menú ====")
+        Console.WriteLine("1. Iniciar Partido.")
+        Console.WriteLine("2. Finalizar un Partido")
+        Console.WriteLine("3. Actualizar puntuación de un Partido")
+        Console.WriteLine("4. Obtener resumen de los partidos")
+        Console.WriteLine("5. Obtener resumen de los partidos")
+        Console.WriteLine("6. Salir")
+        Console.WriteLine("================")
+
+        Console.Write("Ingrese una opción: ")
+        Dim entrada As String = Console.ReadLine()
+        Return entrada
+    End Function
+
     Private Sub StartMatch(repoMatch As MatchRepositories)
         Console.Write("Ingrese el nombre del equipo local: ")
         Dim teamLocal As String = Console.ReadLine()
@@ -101,7 +106,7 @@ Module Program
     Private Sub MostrarPartidosActivos(matches As List(Of Match))
         Dim i = 1
         For Each item In matches
-            Console.WriteLine(i.ToString + ".- " + item.equipoLocal.nombre + " " + item.puntuacionLocal.ToString + "-" + item.puntuacionVisitante.ToString + " " + item.equipoVisitante.nombre)
+            Console.WriteLine(i.ToString + ".- " + item.teamLocal.nombre + " " + item.scoreLocal.ToString + "-" + item.scoreVisitante.ToString + " " + item.teamVisitante.nombre)
             i = i + 1
         Next
     End Sub
